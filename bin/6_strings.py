@@ -142,7 +142,7 @@ print("substring from index-6 to 1 using negative index with step value -1:", my
 print("substring from index-6 to 1 using positive index with step value -2:", my_string[6:1:-2])
 print("substring from index-6 to 1 using negative index with step value -2:", my_string[-2:-7:-2], end="\n\n")
 
-print("#"*40, end="\n\n")
+print("#"*60, end="\n\n")
 
 #-----------------------------------------------------------------------------------------
 
@@ -153,7 +153,7 @@ print(dir(my_string))
 # OR
 # print(dir(str))
 
-print("#"*40, end="\n\n")
+print("#"*60, end="\n\n")
 
 #-------------------------------------------------------------------------------------
 
@@ -176,6 +176,6 @@ print("my_string:", my_string, end="\n\n")
 startswith_result = my_string.startswith("EL") # True/False
 print("startswith_result:", startswith_result)
 
-print("#"*40, end="\n\n")
+print("#"*60, end="\n\n")
 
 #------------------------------------------------------------------------------------
