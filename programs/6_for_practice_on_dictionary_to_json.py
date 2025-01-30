@@ -40,7 +40,6 @@ The fragment shown represents three visitors to my web site
 
 list_of_lines = input_data.splitlines() # no need to provide \n
 myDict = {}
-myList = []
 index = 0
 for each_line in list_of_lines:
     if each_line.startswith("123"):
@@ -55,3 +54,40 @@ for each_line in list_of_lines:
         index = index + 1
 
 print(myDict)
+
+print("writing to 'log_report_2.json'")
+print("-"*20)
+# ---------------
+
+my_json_file_handle = open('log_report_2.json', 'w')
+
+import json
+json.dump(myDict, my_json_file_handle) # write to json file
+# We can pass numbers, string, list, tuple, dictionary to write
+# Other type like set, frozenset etc, convert to list/tuple/dictionary and write
+
+my_json_file_handle.close()
+
+print("""
+'log_report_2.json' file created,
+Please check
+""")
+print("#"*40, end="\n\n")
+###########################
+
+print("Reading 'log_report_2.json'")
+print("-"*20)
+# ---------------
+
+my_json_file_handle = open('log_report_2.json', 'r')
+# mode=r -> read
+
+json_file_content = json.load(my_json_file_handle)
+
+my_json_file_handle.close()
+
+print("json_file_content:", json_file_content, end="\n\n")
+print("type of json_file_content:", type(json_file_content), end="\n\n")
+
+print("#"*40, end="\n\n")
+###########################

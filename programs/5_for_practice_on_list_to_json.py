@@ -52,5 +52,40 @@ for each_line in list_of_lines:
         my_tuple = (ip, date, url)
         myList.append(my_tuple)
 
+print("writing to 'log_report.json'")
+print("-"*20)
+# ---------------
 
-print("List is :", myList)
+my_json_file_handle = open('log_report.json', 'w')
+# new file 'log_report.json' will be created
+
+import json
+json.dump(myList, my_json_file_handle) # write to json file
+
+my_json_file_handle.close()
+
+print("""
+'log_report.json' file created,
+Please check
+""")
+print("#"*40, end="\n\n")
+###########################
+
+print("Reading 'log_report.json'")
+print("-"*20)
+# ---------------
+
+my_json_file_handle = open('log_report.json', 'r')
+# mode=r -> read
+
+json_file_content = json.load(my_json_file_handle)
+
+my_json_file_handle.close()
+
+print("json_file_content:", json_file_content, end="\n\n")
+print("type of json_file_content:", type(json_file_content), end="\n\n")
+
+print("#"*40, end="\n\n")
+###########################
+
+
